@@ -285,7 +285,7 @@ redis:
   ## Deploy Redis using bundled chart
   # To use an external Redis instance, set this to false and configure the
   # settings under *both* tasksRedis *and* cachingRedis
-  enabled: true
+  enabled: false
 
 tasksRedis:
   database: 0
@@ -407,7 +407,7 @@ service:
     # service.beta.kubernetes.io/aws-load-balancer-ssl-cert: <acm_cert_arn>
     # service.beta.kubernetes.io/aws-load-balancer-ssl-ports: http
   type: ClusterIP
-  port: 80
+  port: 8001
   loadBalancerSourceRanges: []
   # - 10.0.0.0/8
 
